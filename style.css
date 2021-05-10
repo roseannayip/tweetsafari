@@ -1,5 +1,5 @@
 body, html {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     display: block;
     padding: 0;
     margin: 0;
@@ -7,7 +7,27 @@ body, html {
 }
 
 a {
-    color: rgb(29, 91, 185);
+    color: #2C505C;
+}
+
+ul {
+  list-style-type:square;
+}
+
+ul, ol {
+  padding-bottom: 40px;
+}
+
+li, p {
+    font-weight: lighter;
+}
+
+ol {
+  margin-left: 10px;
+}
+
+p {
+    margin-left: 30px;
 }
 
 #map {
@@ -19,22 +39,13 @@ a {
     z-index: -3;
 }
 
-#Smokey {
-    width: 15vw;
-    height: relative;
-    position: relative;
-    align-self: center;
-    size: relative;
-    margin-left: 5vw;
-}
-
 .sidebar {
     width: 25%;
     height: 100%;
     z-index: 3;
     background: #000000;
     background-blend-mode: overlay;
-    padding: 15px;
+    padding: 35px;
     text-align: left;
     opacity: 80%;
     position: absolute;
@@ -49,7 +60,7 @@ a {
     font-family: 'Playfair Display', sans-serif;
     padding: 2px;
     border-radius: 2%;
-    opacity: 80%;
+    opacity: 0.9;
     margin-left: 5px;
 }
 
@@ -60,18 +71,17 @@ a {
     padding: 10px;
 }
 
-li, p {
-    font-weight: lighter;
-}
-
-.tabButton, .button {
-    font-family: 'Playfair Display', 'open sans';
+.tabButton {
+    font-family: 'Playfair Display SC', serif;
     size: 0vmax;
+    border:none;
+    outline:none;
     position: relative;
     background-color: black;
-    color: whitesmoke;
+    color: white;
+    fill: black;
     font-style: bold;
-    opacity: 90;
+    opacity: 1;
     border-radius: 2px;
     margin-left: 2px;
     padding: 5px;
@@ -87,14 +97,15 @@ li, p {
 
 .text {
     font-size: 14pt;
-    font-family: 'Arial Light', 'open sans';
+    font-family: 'Playfair Display', sans-serif;
 }
 
 #intro {
     color: #F2F1EB;
     size: smaller;
-    font-family: 'Arial', 'opens sans';
+    font-family: 'Playfair Display', sans-serif;
     position: relative;
+    margin-top: 100px;
 }
 
 h1 {
@@ -108,6 +119,10 @@ h1 {
     text-decoration-style: dotted;
 }
 
+h3 {
+  margin-left: 30px;
+}
+
 #footer {
     width: 100%;
     height: 25%;
@@ -117,21 +132,22 @@ h1 {
 
 /* styling for the tweet box */
 .tweetBox {
-    position: absolute;
-    font-family: 'Arial', 'sans serif';
-    margin-bottom: 5vh;
-    margin-top: 65vh;
-    margin-left: 30%;
-    width: 65vw;
-    padding: 5px;
-    align-items: center;
-    border-radius: 3px;
-    font-size: 14px;
-    color: #000000;
-    background-color: #f2f1eb;
-    border-radius: 3px;
-    z-index: 1;
-    opacity: 80%;
+/* !changing this position att breaks the mouseover. be careful! */
+  position: absolute; 
+  font-family: 'Playfair Display', 'open sans';
+  margin-bottom: 5vh;
+  margin-top: 65vh;
+  margin-left: 30%;
+  width: 65vw;
+  padding: 5px;
+  /* align-items: center; */
+  border-radius: 3px;
+  font-size: 14px;
+  color: #000000;
+  background-color: #f2f1eb;
+  z-index: 1;
+  opacity: 80%;
+  text-indent: none;
 }
 
 .tweetBox {
@@ -148,6 +164,8 @@ h1 {
     color: black;
     font-style: normal;
     float: top;
+    /* text-indent: 50px; */
+
 }
 
 #tweet_media {
@@ -166,26 +184,29 @@ h1 {
 }
 
 pre code {
-    background-color: #eee;
-    border: 1px solid #999;
+    background-color: transparent;
+    border-radius: 2px;
+    /* border: 1px solid #999; */
+    padding-left: 2px;
     display: block;
     width: 95%;
     margin: 1em;
     white-space: pre-wrap;
     font-weight: lighter;
+    padding: 10px;
 }
 
 .prettyprint {
-    background-color: #a1bec9;
-    margin: 10px;
-    border-radius: 30px;
+    /* background-color: #A1BEC9; */
+    margin: 1px;
     padding: 5px;
+    border-radius: 3px;
 }
 
 #chart {
     position: absolute;
     border-radius: 4px;
-    padding: 5px;
+    padding: 20px;
     align-items: left;
     margin-left: 30%;
     display: none;
@@ -202,8 +223,18 @@ pre code {
     border-radius: 3px;
     width: 120px;
     border: 1px solid rgba(0, 0, 0, 0.4);
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'Playfair Display SC', serif;
     color: Black;
+}
+
+#chartStack {
+    display: block;
+    text-align: justify;
+    /* position: sticky; */
+}
+
+#chart1Container {
+    align-items: center;
 }
 
 #menu a {
